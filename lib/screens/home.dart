@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:panucci_movies/components/movie_card.dart';
+import 'package:panucci_movies/components/search_input.dart';
 
 class Home extends StatelessWidget {
-const Home({ Key? key }) : super(key: key);
+Home({ Key? key }) : super(key: key);
+final TextEditingController inputController = TextEditingController();
 
   @override
   Widget build(BuildContext context){
@@ -10,6 +12,7 @@ const Home({ Key? key }) : super(key: key);
       child: Scaffold(
       body: CustomScrollView(
         slivers: <Widget>[
+          SliverToBoxAdapter(child: SearchInput(searchTextController: inputController),),
           SliverToBoxAdapter(
             child: Text("Movies"),
           ),
