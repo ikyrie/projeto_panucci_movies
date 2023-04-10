@@ -21,12 +21,12 @@ class MovieCard extends StatelessWidget {
                     ),
                   );
                 },
-                child:
-                    Image.asset("assets/images/pamonha.png", fit: BoxFit.cover),
+                child: Image.asset("assets/images/mario_filme.jpg",
+                    fit: BoxFit.cover),
               ),
             )),
         Text(
-          "Filme da pamonha",
+          "Super Mario Bros. O Filme",
           style: Theme.of(context).textTheme.displaySmall,
         )
       ],
