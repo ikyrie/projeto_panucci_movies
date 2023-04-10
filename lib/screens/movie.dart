@@ -18,9 +18,8 @@ class MovieScreen extends StatelessWidget {
                       image: AssetImage("assets/images/pamonha.png"),
                       fit: BoxFit.fill,
                     ),
-                    borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(20),
-                      bottomRight: Radius.circular(20),
+                    borderRadius: BorderRadius.vertical(
+                      bottom: Radius.circular(20),
                     ),
                   ),
                   height: MediaQuery.of(context).size.height / 2.6,
@@ -39,7 +38,8 @@ class MovieScreen extends StatelessWidget {
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Card(
-                    elevation: 16,
+                    margin: EdgeInsets.symmetric(horizontal: 16),
+                    elevation: 5,
                     child: ConstrainedBox(
                       constraints: const BoxConstraints(
                         minHeight: 120,
@@ -51,14 +51,8 @@ class MovieScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Text(
-                              "Filme da Pamonha",
-                              style: Theme.of(context).textTheme.displayMedium,
-                            ),
-                            Text(
-                              "Comédia",
-                              style: Theme.of(context).textTheme.displaySmall,
-                            ),
+                            Text( "Filme da Pamonha", style: Theme.of(context).textTheme.displayMedium,),
+                            Text( "Comédia", style: Theme.of(context).textTheme.displaySmall,),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
@@ -93,7 +87,7 @@ class MovieScreen extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(16.0),
             child: Text(
               "Sessões",
               style: Theme.of(context).textTheme.displayMedium,
@@ -101,7 +95,7 @@ class MovieScreen extends StatelessWidget {
           ),
           Expanded(
             child: ListView(
-              padding: const EdgeInsets.all(8),
+              padding: const EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0),
               children: [
                 Wrap(
                   spacing: 2.0,
@@ -114,28 +108,19 @@ class MovieScreen extends StatelessWidget {
                     '20:30',
                     '20:30',
                     '20:30',
-                  ]
-                      .map(
-                        (e) => Card(
-                          shape: RoundedRectangleBorder(
-                            side: BorderSide(
-                              color: Theme.of(context).colorScheme.outline,
-                            ),
-                            borderRadius: const BorderRadius.all(
-                              Radius.circular(12),
-                            ),
-                          ),
-                          child: InkWell(
-                            onTap: () {},
-                            child: SizedBox(
-                              width: 60,
-                              height: 40,
-                              child: Center(child: Text(e)),
-                            ),
-                          ),
+                  ].map(
+                    (e) => Card(
+                      child: InkWell(
+                        onTap: () {},
+                        child: SizedBox(
+                          width: 60,
+                          height: 40,
+                          child: Center(child: Text(e)),
                         ),
-                      )
-                      .toList(),
+                      ),
+                    ),
+                  )
+                  .toList(),
                 ),
               ],
             ),
