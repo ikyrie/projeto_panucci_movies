@@ -12,25 +12,28 @@ class Home extends StatelessWidget {
       child: Scaffold(
         body: Padding(
           padding: const EdgeInsets.all(8.0),
-          child: CustomScrollView(slivers: <Widget>[
-            SliverToBoxAdapter(
-              child: SearchInput(searchTextController: inputController),
-            ),
-            SliverToBoxAdapter(
-              child: Text(
-                "Filmes",
-                style: Theme.of(context).textTheme.displayLarge,
+          child: CustomScrollView(
+            slivers: <Widget>[
+              SliverToBoxAdapter(
+                child: SearchInput(searchTextController: inputController),
               ),
-            ),
-            SliverGrid.builder(
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+              SliverToBoxAdapter(
+                child: Text(
+                  "Filmes",
+                  style: Theme.of(context).textTheme.displayLarge,
+                ),
+              ),
+              SliverGrid.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   childAspectRatio: 0.7,
-                  crossAxisSpacing: 16),
-              itemBuilder: (context, index) => const MovieCard(),
-              itemCount: 6,
-            ),
-          ]),
+                  crossAxisSpacing: 16,
+                ),
+                itemBuilder: (context, index) => const MovieCard(),
+                itemCount: 6,
+              ),
+            ],
+          ),
         ),
       ),
     );

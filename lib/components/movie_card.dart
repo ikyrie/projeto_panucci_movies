@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:panucci_movies/screens/movie.dart';
 
 class MovieCard extends StatelessWidget {
   const MovieCard({Key? key}) : super(key: key);
@@ -12,7 +13,14 @@ class MovieCard extends StatelessWidget {
             child: ConstrainedBox(
               constraints: const BoxConstraints(minHeight: 200),
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const MovieScreen(),
+                    ),
+                  );
+                },
                 child:
                     Image.asset("assets/images/pamonha.png", fit: BoxFit.cover),
               ),
