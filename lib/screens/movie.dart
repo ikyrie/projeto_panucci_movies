@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:panucci_movies/components/tab_bar.dart';
 
 class MovieScreen extends StatelessWidget {
   const MovieScreen({super.key});
@@ -15,8 +16,8 @@ class MovieScreen extends StatelessWidget {
                 Container(
                   decoration: const BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage("assets/images/pamonha.png"),
-                      fit: BoxFit.fill,
+                      image: AssetImage("assets/images/mario_filme.jpg"),
+                      fit: BoxFit.cover,
                     ),
                     borderRadius: BorderRadius.vertical(
                       bottom: Radius.circular(20),
@@ -38,7 +39,7 @@ class MovieScreen extends StatelessWidget {
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Card(
-                    margin: EdgeInsets.symmetric(horizontal: 16),
+                    margin: const EdgeInsets.symmetric(horizontal: 16),
                     elevation: 5,
                     child: ConstrainedBox(
                       constraints: const BoxConstraints(
@@ -51,27 +52,32 @@ class MovieScreen extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
-                            Text( "Filme da Pamonha", style: Theme.of(context).textTheme.displayMedium,),
-                            Text( "Comédia", style: Theme.of(context).textTheme.displaySmall,),
+                            Text(
+                              "Super Mario Bros. O Filme",
+                              style: Theme.of(context).textTheme.displayMedium,
+                            ),
+                            Text(
+                              "Aventura/Comédia",
+                              style: Theme.of(context).textTheme.displaySmall,
+                            ),
                             Row(
                               mainAxisAlignment: MainAxisAlignment.start,
                               children: [
                                 Container(
                                   height: 32,
                                   width: 32,
-                                  color: Colors.green,
+                                  decoration: BoxDecoration(
+                                      color: Colors.green,
+                                      borderRadius: BorderRadius.circular(8.0)),
                                   margin: const EdgeInsets.only(right: 8.0),
                                   child: Center(
-                                    child: Text(
-                                      '16',
-                                      style: Theme.of(context)
-                                          .textTheme
-                                          .labelMedium,
-                                    ),
-                                  ),
+                                      child: Text('L',
+                                          style: Theme.of(context)
+                                              .textTheme
+                                              .labelMedium)),
                                 ),
                                 Text(
-                                  '01h 49m',
+                                  '01h 32m',
                                   style:
                                       Theme.of(context).textTheme.displaySmall,
                                 )
@@ -86,45 +92,7 @@ class MovieScreen extends StatelessWidget {
               ],
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Text(
-              "Sessões",
-              style: Theme.of(context).textTheme.displayMedium,
-            ),
-          ),
-          Expanded(
-            child: ListView(
-              padding: const EdgeInsets.fromLTRB(16.0, 8.0, 16.0, 8.0),
-              children: [
-                Wrap(
-                  spacing: 2.0,
-                  children: [
-                    '20:30',
-                    '20:30',
-                    '20:30',
-                    '20:30',
-                    '20:30',
-                    '20:30',
-                    '20:30',
-                    '20:30',
-                  ].map(
-                    (e) => Card(
-                      child: InkWell(
-                        onTap: () {},
-                        child: SizedBox(
-                          width: 60,
-                          height: 40,
-                          child: Center(child: Text(e)),
-                        ),
-                      ),
-                    ),
-                  )
-                  .toList(),
-                ),
-              ],
-            ),
-          )
+          const Expanded(child: TabBarMovie())
         ],
       ),
     );
