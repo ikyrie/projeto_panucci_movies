@@ -23,7 +23,18 @@ class MovieScreen extends StatelessWidget {
                       bottomRight: Radius.circular(20),
                     ),
                   ),
-                  height: MediaQuery.of(context).size.height / 2.2,
+                  height: MediaQuery.of(context).size.height / 2.6,
+                ),
+                Container(
+                  padding: const EdgeInsets.all(16.0),
+                  child: IconButton(
+                    icon: const Icon(Icons.arrow_back_ios),
+                    iconSize: 30,
+                    color: Colors.white,
+                    onPressed: () {
+                      Navigator.pop(context);
+                    },
+                  ),
                 ),
                 Align(
                   alignment: Alignment.bottomCenter,
@@ -104,23 +115,26 @@ class MovieScreen extends StatelessWidget {
                     '20:30',
                     '20:30',
                   ]
-                      .map((e) => Card(
-                            shape: RoundedRectangleBorder(
-                              side: BorderSide(
-                                color: Theme.of(context).colorScheme.outline,
-                              ),
-                              borderRadius:
-                                  const BorderRadius.all(Radius.circular(12)),
+                      .map(
+                        (e) => Card(
+                          shape: RoundedRectangleBorder(
+                            side: BorderSide(
+                              color: Theme.of(context).colorScheme.outline,
                             ),
-                            child: InkWell(
-                              onTap: () {},
-                              child: SizedBox(
-                                width: 60,
-                                height: 40,
-                                child: Center(child: Text(e)),
-                              ),
+                            borderRadius: const BorderRadius.all(
+                              Radius.circular(12),
                             ),
-                          ))
+                          ),
+                          child: InkWell(
+                            onTap: () {},
+                            child: SizedBox(
+                              width: 60,
+                              height: 40,
+                              child: Center(child: Text(e)),
+                            ),
+                          ),
+                        ),
+                      )
                       .toList(),
                 ),
               ],
