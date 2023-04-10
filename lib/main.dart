@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:panucci_movies/screens/home.dart';
+import 'package:panucci_movies/themes/my_theme.dart';
 
 void main() {
   runApp(const PanucciMovies());
@@ -13,10 +14,8 @@ class PanucciMovies extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(useMaterial3: true, colorSchemeSeed: Colors.blue),
+      theme: myTheme,
       home: Home(),
     );
   }
 }
-
-
