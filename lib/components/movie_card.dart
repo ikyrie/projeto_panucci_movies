@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:panucci_movies/screens/movie.dart';
+import 'package:panucci_movies/screens/movie_screen.dart';
 
 class MovieCard extends StatelessWidget {
   const MovieCard({Key? key}) : super(key: key);
@@ -23,7 +23,7 @@ class MovieCard extends StatelessWidget {
               },
               child: Ink(
                 width: double.infinity,
-                decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/mario_filme.jpg"), fit: BoxFit.cover),),
+                decoration: const BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/mario_filme.jpg"), fit: BoxFit.cover),),
               ),
             ),
           )),
