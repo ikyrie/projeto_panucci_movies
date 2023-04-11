@@ -12,39 +12,33 @@ class _TabBarMovieState extends State<TabBarMovie> {
   Widget build(BuildContext context) {
     return DefaultTabController(
       length: 2,
-      child: Scaffold(
-        // backgroundColor: Colors.red,
-        body: Padding(
-          padding: const EdgeInsets.all(16),
-          child: Column(
-            children: [
-              Container(
-                height: 45,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(20)),
-                child: const TabBar(
-                    tabs: [Tab(text: 'Sessões'), Tab(text: 'Detalhes')]),
+      child: Padding(
+        padding: const EdgeInsets.all(16),
+        child: Column(
+          children: [
+            Ink(
+              height: 45,
+              child: const TabBar(
+                tabs: [Tab(text: 'Sessões'), Tab(text: 'Detalhes')]),
+            ),
+            Expanded(
+              child: TabBarView(
+                children: [
+                  ListView(
+                    padding: const EdgeInsets.all(8),
+                    children: const [
+                      _MovieSession(),
+                    ],
+                  ),
+                  ListView(
+                    children: const [
+                      _MovieDetail(),
+                    ],
+                  )
+                ],
               ),
-              Expanded(
-                child: TabBarView(
-                  children: [
-                    ListView(
-                      padding: const EdgeInsets.all(8),
-                      children: const [
-                        _MovieSession(),
-                      ],
-                    ),
-                    ListView(
-                      children: const [
-                        _MovieDetail(),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
