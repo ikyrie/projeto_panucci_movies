@@ -9,22 +9,24 @@ class MovieCard extends StatelessWidget {
     return Column(
       children: [
         Card(
-            clipBehavior: Clip.hardEdge,
-            child: ConstrainedBox(
-              constraints: const BoxConstraints(minHeight: 200),
-              child: InkWell(
-                onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const MovieScreen(),
-                    ),
-                  );
-                },
-                child: Image.asset("assets/images/mario_filme.jpg",
-                    fit: BoxFit.cover),
+          clipBehavior: Clip.hardEdge,
+          child: ConstrainedBox(
+            constraints: const BoxConstraints(minHeight: 200),
+            child: InkWell(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => const MovieScreen(),
+                  ),
+                );
+              },
+              child: Ink(
+                width: double.infinity,
+                decoration: BoxDecoration(image: DecorationImage(image: AssetImage("assets/images/mario_filme.jpg"), fit: BoxFit.cover),),
               ),
-            )),
+            ),
+          )),
         Text(
           "Super Mario Bros. O Filme",
           style: Theme.of(context).textTheme.displaySmall,

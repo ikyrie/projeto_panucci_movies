@@ -26,8 +26,8 @@ class Home extends StatelessWidget {
               SliverGrid.builder(
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
-                  childAspectRatio: 0.7,
                   crossAxisSpacing: 16,
+                  mainAxisExtent: 240,
                 ),
                 itemBuilder: (context, index) => const MovieCard(),
                 itemCount: 6,
