@@ -36,7 +36,7 @@ class _PosterCard extends StatelessWidget {
     return Align(
       alignment: Alignment.bottomCenter,
       child: Card(
-        margin: const EdgeInsets.symmetric(horizontal: 16),
+        margin: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 8.0),
         elevation: 5,
         child: ConstrainedBox(
           constraints: const BoxConstraints(
