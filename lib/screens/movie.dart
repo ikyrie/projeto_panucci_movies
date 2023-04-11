@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:panucci_movies/components/tab_bar.dart';
 
+import '../components/back_button.dart';
+
 class MovieScreen extends StatelessWidget {
   const MovieScreen({super.key});
 
@@ -14,7 +16,7 @@ class MovieScreen extends StatelessWidget {
             child: Stack(
               children: const [
                 _Poster(),
-                BackButton(),
+                CustomBackButton(),
                 _PosterCard(),
               ],
             ),
