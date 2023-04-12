@@ -7,4 +7,5 @@ class Movie {
     final String genre;
     final String imageURI;
     final List<String> sessions;
+    static Map<String, double> prices = {"meia": 12.0, "inteira": 24.0};
 }
