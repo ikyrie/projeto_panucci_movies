@@ -1,0 +1,313 @@
+{
+  "filmes": 
+  [
+    {
+      "name": "Inception",
+      "classification": "14",
+      "duration": "02h 28min",
+      "sinopse": "Um ladrão profissional rouba informações ao infiltrar-se nos sonhos das pessoas.",
+      "genre": "Suspense",
+      "imageURI": "https://images.unsplash.com/photo-1562711212-d1e2c1f89f06",
+      "sessions": [
+        "10:00",
+        "13:30",
+        "16:45",
+        "20:00"
+      ]
+    },
+    {
+      "name": "Forrest Gump",
+      "classification": "12",
+      "duration": "02h 22min",
+      "sinopse": "A vida e as aventuras de um homem comum e seu impacto na história dos EUA.",
+      "genre": "Drama",
+      "imageURI": "https://images.unsplash.com/photo-1591714520626-efc4740d0f84",
+      "sessions": [
+        "09:45",
+        "14:15",
+        "18:30",
+        "21:00"
+      ]
+    },
+    {
+      "name": "Pulp Fiction",
+      "classification": "18",
+      "duration": "02h 28min",
+      "sinopse": "As vidas de dois assassinos, um boxeador e um casal se cruzam no submundo do crime.",
+      "genre": "Drama",
+      "imageURI": "https://images.unsplash.com/photo-1549423247-8d4a0e7e47b3",
+      "sessions": [
+        "10:00",
+        "13:15",
+        "17:45",
+        "22:30"
+      ]
+    },
+    {
+      "name": "The Godfather",
+      "classification": "18",
+      "duration": "02h 25min",
+      "sinopse": "A história de uma família de mafiosos e a luta pelo poder.",
+      "genre": "Drama",
+      "imageURI": "https://images.unsplash.com/photo-1554848615-6d5b3e3a2a69",
+      "sessions": [
+        "11:00",
+        "15:30",
+        "20:15"
+      ]
+    },
+    {
+      "name": "Fight Club",
+      "classification": "18",
+      "duration": "02h 19min",
+      "sinopse": "Um homem desiludido com a vida forma um clube secreto de luta.",
+      "genre": "Drama",
+      "imageURI": "https://images.unsplash.com/photo-1532804262512-a9a9b2df2e2b",
+      "sessions": [
+        "09:30",
+        "12:45",
+        "16:00",
+        "19:15",
+        "22:00"
+      ]
+    },
+    {
+      "name": "The Shawshank Redemption",
+      "classification": "16",
+      "duration": "02h 22min",
+      "sinopse": "Um banqueiro é preso por um crime que não cometeu e busca redenção.",
+      "genre": "Drama",
+      "imageURI": "https://images.unsplash.com/photo-1499676948811-9bafbfe9f9ab",
+      "sessions": [
+        "10:15",
+        "14:00",
+        "17:45",
+        "21:30"
+      ]
+    },
+    {
+      "name": "The Dark Knight",
+      "classification": "14",
+      "duration": "02h 32min",
+      "sinopse": "Batman enfrenta seu maior inimigo, o Coringa, enquanto lida com a justiça e a corrupção.",
+      "genre": "Suspense",
+      "imageURI": "https://images.unsplash.com/photo-1507484467459-0c01c3a8a3c9",
+      "sessions": [
+        "11:30",
+        "15:00",
+        "18:30",
+        "22:00"
+      ]
+    },
+    {
+      "name": "Interstellar",
+      "classification": "12",
+      "duration": "02h 49min",
+      "sinopse": "Astronautas buscam um novo lar para a humanidade no espaço.",
+      "genre": "Drama",
+      "imageURI": "https://images.unsplash.com/photo-1539037116273-a6be8e6e9a34",
+      "sessions": [
+        "09:00",
+        "12:30",
+        "16:00",
+        "19:30",
+        "23:00"
+      ]
+    },
+    {
+      "name": "The Matrix",
+      "classification": "16",
+      "duration": "02h 16min",
+      "sinopse": "Um hacker descobre a verdade sobre a realidade e se rebela contra o sistema.",
+      "genre": "Suspense",
+      "imageURI": "https://images.unsplash.com/photo-1563013544-824ae1b704d3",
+      "sessions": [
+        "10:45",
+        "14:30",
+        "18:15",
+        "22:00"
+      ]
+    },
+    {
+      "name": "The Hangover",
+      "classification": "18",
+      "duration": "01h 40min",
+      "sinopse": "Três amigos acordam após uma despedida de solteiro e não lembram o que aconteceu.",
+      "genre": "Comédia",
+      "imageURI": "https://images.unsplash.com/photo-1528716321680-815a8cdb8cbe",
+      "sessions": [
+        "11:00",
+        "13:45",
+        "16:30",
+        "19:15",
+        "22:00"
+      ]
+    },
+    {
+      "name": "Get Out",
+      "classification": "16",
+      "duration": "01h 44min",
+      "sinopse": "Um jovem negro descobre um segredo sinistro ao visitar a família de sua namorada branca.",
+      "genre": "Terror",
+      "imageURI": "https://images.unsplash.com/photo-1517876033-3e2e9d9d8b17",
+      "sessions": [
+        "10:30",
+        "13:00",
+        "15:30",
+        "18:00",
+        "20:30",
+        "23:00"
+      ]
+    },
+    {
+      "name": "Whiplash",
+      "classification": "14",
+      "duration": "01h 47min",
+      "sinopse": "Um jovem baterista enfrenta um professor rigoroso em busca da perfeição.",
+      "genre": "Drama",
+      "imageURI": "https://images.unsplash.com/photo-1527684651001-731d9669e277",
+      "sessions": [
+        "11:15",
+        "14:45",
+        "18:15",
+        "21:45"
+      ]
+    },
+    {
+      "name": "Up",
+      "classification": "Livre",
+      "duration": "01h 36min",
+      "sinopse": "Um idoso e um jovem aventureiro viajam juntos em uma casa voadora.",
+      "genre": "Comédia",
+      "imageURI": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e",
+      "sessions": [
+        "10:30",
+        "13:00",
+        "15:30",
+        "18:00",
+        "20:30"
+      ]
+    },
+    {
+      "name": "Django Unchained",
+      "classification": "18",
+      "duration": "02h 45min",
+      "sinopse": "Um escravo liberto busca vingança e a libertação de sua esposa.",
+      "genre": "Drama",
+      "imageURI": "https://images.unsplash.com/photo-1555368406-60d2e1d0b75e",
+      "sessions": [
+        "10:00",
+        "13:45",
+        "17:30",
+        "21:15"
+      ]
+    },
+    {
+      "name": "Parasite",
+      "classification": "16",
+      "duration": "02h 12min",
+      "sinopse": "Uma família pobre se infiltra em uma família rica, com consequências imprevisíveis.",
+      "genre": "Suspense",
+      "imageURI": "https://images.unsplash.com/photo-1557682224-5b8590cd9ec5",
+      "sessions": [
+        "09:30",
+        "12:30",
+        "15:30",
+        "18:30",
+        "21:30"
+      ]
+    },
+    {
+      "name": "The Shining",
+      "classification": "18",
+      "duration": "02h 26min",
+      "sinopse": "Um escritor e sua família enfrentam forças sobrenaturais em um hotel isolado.",
+      "genre": "Terror",
+      "imageURI": "https://images.unsplash.com/photo-1531840601714-1f1d07daa001",
+      "sessions": [
+        "11:00",
+        "14:00",
+        "17:00",
+        "20:00",
+        "23:00"
+      ]
+    },
+    {
+      "name": "Mad Max: Fury Road",
+      "classification": "16",
+      "duration": "02h 00min",
+      "sinopse": "Em um mundo pós-apocalíptico, uma mulher e um nômade unem forças contra um tirano.",
+      "genre": "Suspense",
+      "imageURI": "https://images.unsplash.com/photo-1513806144766-6b6b34dac6e0",
+      "sessions": [
+        "10:45",
+        "13:45",
+        "16:45",
+        "19:45",
+        "22:45"
+      ]
+    },
+    {
+      "name": "The Big Lebowski",
+      "classification": "18",
+      "duration": "01h 57min",
+      "sinopse": "Um desempregado e seu amigo se envolvem em uma trama de sequestro e extorsão.",
+      "genre": "Comédia",
+      "imageURI": "https://images.unsplash.com/photo-1559438049-9bbf4a3c3dff",
+      "sessions": [
+        "12:00",
+        "15:00",
+        "18:00",
+        "21:00"
+      ]
+    },
+    {
+      "name": "A Quiet Place",
+      "classification": "14",
+      "duration": "01h 30min",
+      "sinopse": "Uma família luta pela sobrevivência em um mundo dominado por criaturas mortais.",
+      "genre": "Terror",
+      "imageURI": "https://images.unsplash.com/photo-1514853698791-3bf8eeb5c7b",
+      "sessions": [
+        "11:15",
+        "13:45",
+        "16:15",
+        "18:45",
+        "21:15",
+        "23:45"
+      ]
+    },
+    {
+      "name": "La La Land",
+      "classification": "12",
+      "duration": "02h 08min",
+      "sinopse": "Um pianista e uma atriz perseguem seus sonhos e encontram o amor em Los Angeles.",
+      "genre": "Drama",
+      "imageURI": "https://images.unsplash.com/photo-1485795046599-702122cd1267",
+      "sessions": [
+        "10:30",
+        "13:30",
+        "16:30",
+        "19:30",
+        "22:30"
+      ]
+    },
+    {
+      "name": "Toy Story",
+      "classification": "Livre",
+      "duration": "01h 21min",
+      "sinopse": "Brinquedos ganham vida quando seus donos não estão por perto e vivem grandes aventuras.",
+      "genre": "Comédia",
+      "imageURI": "https://images.unsplash.com/photo-1496857239036-1fb137683000",
+      "sessions": [
+        "09:15",
+        "11:45",
+        "14:15",
+        "16:45",
+        "19:15",
+        "21:45"
+      ]
+    }
+  ]
+}
+
