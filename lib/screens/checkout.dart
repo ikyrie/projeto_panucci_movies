@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:panucci_movies/components/checkout/order_item.dart';
+import 'package:panucci_movies/components/parental_rating.dart';
 
 import '../components/checkout/payment_method.dart';
 import '../components/checkout/payment_total.dart';
@@ -34,7 +35,8 @@ class Checkout extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
                         Text("Mario the movie", style: Theme.of(context).textTheme.bodyLarge),
-                        Text("Uma sinopse muito bem escrita e bem trabalhada pelo nosso querido chat gepeto. Por hora essa será a descrição enquanto não temos acesso à api de filmes", style: Theme.of(context).textTheme.bodySmall),
+                        const ParentalRating(),
+                        const Text("18:00"),
                       ],
                     ),
                   ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:panucci_movies/components/movie_screen/parental_rating.dart';
+
+import '../parental_rating.dart';
 
 class PosterCard extends StatelessWidget {
   const PosterCard();
@@ -30,7 +31,12 @@ class PosterCard extends StatelessWidget {
                   "Aventura/Comédia",
                   style: Theme.of(context).textTheme.displaySmall,
                 ),
-                const ParentalRating(),
+                Row(
+                  children: [
+                    const ParentalRating(),
+                    Text('01h 32m', style: Theme.of(context).textTheme.displaySmall),
+                  ],
+                ),
               ],
             ),
           ),

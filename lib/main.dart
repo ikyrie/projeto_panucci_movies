@@ -16,7 +16,7 @@ class PanucciMovies extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: myTheme,
-      home: Checkout(homeContext: context),
+      home: Home(),
     );
   }
 }
