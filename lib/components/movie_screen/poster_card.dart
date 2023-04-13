@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:panucci_movies/components/classification.dart';
 
 import '../parental_rating.dart';
 
@@ -12,7 +13,7 @@ class PosterCard extends StatelessWidget {
 
   final String? title;
   final String? genre;
-  final String? classification;
+  final Classification? classification;
   final String? duration;
 
   @override
@@ -43,8 +44,11 @@ class PosterCard extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    const ParentalRating(),
-                    Text('01h 32m', style: Theme.of(context).textTheme.displaySmall),
+                    ParentalRating(
+                      classification: classification,
+                    ),
+                    Text(duration ?? 'Duração Indisponível',
+                        style: Theme.of(context).textTheme.displaySmall),
                   ],
                 ),
               ],
