@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:panucci_movies/screens/checkout.dart';
 
 import '../../models/movie.dart';
 
@@ -79,13 +80,21 @@ class _MovieSession extends StatelessWidget {
             spacing: 2.0,
             children: movie.sessions!
                 .map(
-                  (e) => Card(
+                  (session) => Card(
                     child: InkWell(
-                      onTap: () {},
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                Checkout(movie: movie, session: session),
+                          ),
+                        );
+                      },
                       child: SizedBox(
                         width: 60,
                         height: 40,
-                        child: Center(child: Text(e)),
+                        child: Center(child: Text(session)),
                       ),
                     ),
                   ),

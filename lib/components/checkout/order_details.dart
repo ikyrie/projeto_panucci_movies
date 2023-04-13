@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
+import '../../models/movie.dart';
 import '../parental_rating.dart';
 
 class OrderDetails extends StatelessWidget {
-  const OrderDetails({
-    super.key,
-  });
+  const OrderDetails({super.key, required this.movie, required this.session});
+
+  final Movie movie;
+  final String session;
 
   @override
   Widget build(BuildContext context) {
@@ -14,34 +16,48 @@ class OrderDetails extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          Container(
-            margin: const EdgeInsets.only(right: 16),
-            decoration: BoxDecoration(
-              image: DecorationImage(image: AssetImage("assets/images/mario_filme.jpg"), fit: BoxFit.cover),
-              borderRadius: BorderRadius.circular(10),
-            ),
-            width: 80,
-            height: 120,
-          ),
+          movie.imageURI != null
+              ? Container(
+                  margin: const EdgeInsets.only(right: 16),
+                  decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: NetworkImage(movie.imageURI!),
+                        fit: BoxFit.cover),
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  width: 80,
+                  height: 120,
+                )
+              : Container(
+                  margin: const EdgeInsets.only(right: 16),
+                  decoration:
+                      BoxDecoration(borderRadius: BorderRadius.circular(10)),
+                  width: 80,
+                  height: 120,
+                  child: const Center(child: Icon(Icons.error, size: 30)),
+                ),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text("Mario the movie", style: Theme.of(context).textTheme.bodyLarge),
+                Text(movie.name ?? "Nome Indisponível",
+                    style: Theme.of(context).textTheme.bodyLarge),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 8.0),
                   child: Row(
                     children: [
                       const ParentalRating(),
-                      Text('01h 32m', style: Theme.of(context).textTheme.displaySmall),
+                      Text(movie.duration ?? 'Duração Indisponível',
+                          style: Theme.of(context).textTheme.displaySmall),
                     ],
                   ),
                 ),
-                const Text("Sessão: 18:00"),
+                Text("Sessão: $session"),
               ],
             ),
           ),
-        ],),
+        ],
+      ),
     );
   }
 }

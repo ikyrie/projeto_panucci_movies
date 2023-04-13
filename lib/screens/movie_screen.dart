@@ -20,7 +20,9 @@ class MovieScreen extends StatelessWidget {
             child: Stack(
               children: [
                 Poster(imageURL: movie.imageURI),
-                const CustomBackButton(),
+                const Padding(
+                    padding: EdgeInsets.fromLTRB(8.0, 32.0, 8.0, 16.0),
+                    child: CustomBackButton()),
                 PosterCard(
                   title: movie.name,
                   genre: movie.genre,

@@ -8,9 +8,11 @@ class CustomBackButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.all(16.0),
       child: IconButton(
-        icon: const Icon(Icons.arrow_back_ios),
+        icon: const Icon(
+          Icons.arrow_back_ios,
+          shadows: <Shadow>[Shadow(color: Colors.black, blurRadius: 15.0)],
+        ),
         iconSize: 30,
         color: Colors.white,
         onPressed: () {
