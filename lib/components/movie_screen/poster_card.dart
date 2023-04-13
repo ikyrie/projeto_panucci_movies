@@ -2,7 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:panucci_movies/components/movie_screen/parental_rating.dart';
 
 class PosterCard extends StatelessWidget {
-  const PosterCard();
+  const PosterCard(
+      {super.key,
+      required this.title,
+      required this.genre,
+      required this.classification,
+      required this.duration});
+
+  final String? title;
+  final String? genre;
+  final String? classification;
+  final String? duration;
 
   @override
   Widget build(BuildContext context) {
@@ -23,11 +33,11 @@ class PosterCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Text(
-                  "Super Mario Bros. O Filme",
+                  title ?? 'Nome Indisponível',
                   style: Theme.of(context).textTheme.displayMedium,
                 ),
                 Text(
-                  "Aventura/Comédia",
+                  genre ?? 'Gênero Indisponível',
                   style: Theme.of(context).textTheme.displaySmall,
                 ),
                 const ParentalRating(),

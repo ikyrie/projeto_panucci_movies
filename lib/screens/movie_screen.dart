@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:panucci_movies/components/tab_bar_movie.dart';
+import 'package:panucci_movies/components/movie_screen/tab_bar_movie.dart';
 
 import '../components/custom_back_button.dart';
 import '../components/movie_screen/poster.dart';
 import '../components/movie_screen/poster_card.dart';
+import '../models/movie.dart';
 
 class MovieScreen extends StatelessWidget {
-  const MovieScreen({super.key});
+  const MovieScreen({super.key, required this.movie});
+  final Movie movie;
 
   @override
   Widget build(BuildContext context) {
@@ -16,14 +18,19 @@ class MovieScreen extends StatelessWidget {
         children: [
           Expanded(
             child: Stack(
-              children: const [
-                Poster(),
-                CustomBackButton(),
-                PosterCard(),
+              children: [
+                Poster(imageURL: movie.imageURI),
+                const CustomBackButton(),
+                PosterCard(
+                  title: movie.name,
+                  genre: movie.genre,
+                  classification: movie.classification,
+                  duration: movie.duration,
+                ),
               ],
             ),
           ),
-          const Expanded(child: TabBarMovie())
+          Expanded(child: TabBarMovie(movie: movie)),
         ],
       ),
     );

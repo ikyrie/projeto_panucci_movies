@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ParentalRating extends StatelessWidget {
-  const ParentalRating({super.key});
+  const ParentalRating({super.key, this.duration, this.classification});
+  final String? duration;
+  final String? classification;
 
   @override
   Widget build(BuildContext context) {
@@ -15,7 +17,8 @@ class ParentalRating extends StatelessWidget {
               color: Colors.green, borderRadius: BorderRadius.circular(8.0)),
           margin: const EdgeInsets.only(right: 8.0),
           child: Center(
-              child: Text('L', style: Theme.of(context).textTheme.labelMedium)),
+              child: Text(classification ?? '?',
+                  style: Theme.of(context).textTheme.labelMedium)),
         ),
         Text('01h 32m', style: Theme.of(context).textTheme.displaySmall)
       ],
