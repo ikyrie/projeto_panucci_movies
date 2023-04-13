@@ -1,10 +1,5 @@
 import 'package:flutter/material.dart';
-<<<<<<< HEAD
 import 'package:panucci_movies/screens/home/home.dart';
-=======
-import 'package:panucci_movies/screens/checkout.dart';
-import 'package:panucci_movies/screens/home.dart';
->>>>>>> pagina_checkout
 import 'package:panucci_movies/themes/my_theme.dart';
 
 void main() {
