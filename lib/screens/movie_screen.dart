@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:panucci_movies/components/movie_screen/tab_bar_movie.dart';
 
-import '../components/custom_back_button.dart';
 import '../components/movie_screen/poster.dart';
 import '../components/movie_screen/poster_card.dart';
 import '../models/movie.dart';
@@ -20,9 +19,6 @@ class MovieScreen extends StatelessWidget {
             child: Stack(
               children: [
                 Poster(imageURL: movie.imageURI),
-                const Padding(
-                    padding: EdgeInsets.fromLTRB(8.0, 32.0, 8.0, 16.0),
-                    child: CustomBackButton()),
                 PosterCard(
                   title: movie.name,
                   genre: movie.genre,
