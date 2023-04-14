@@ -46,7 +46,9 @@ class OrderDetails extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(vertical: 8.0),
                   child: Row(
                     children: [
-                      const ParentalRating(),
+                      ParentalRating(
+                        classification: movie.classification,
+                      ),
                       Text(movie.duration ?? 'Duração Indisponível',
                           style: Theme.of(context).textTheme.displaySmall),
                     ],

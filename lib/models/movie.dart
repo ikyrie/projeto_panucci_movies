@@ -1,3 +1,5 @@
+import 'package:panucci_movies/components/classification.dart';
+
 class Movie {
   Movie(
       {required this.name,
@@ -8,7 +10,7 @@ class Movie {
       required this.imageURI,
       required this.sessions});
   String? name;
-  String? classification;
+  Classification? classification;
   String? duration;
   String? sinopse;
   String? genre;
@@ -17,7 +19,8 @@ class Movie {
 
   Movie.fromJson(Map<String, dynamic> json) {
     name = json['name'].toString();
-    classification = json['classification'].toString();
+    classification = Classification.values.firstWhere(
+        (element) => element.classification == json['classification']);
     duration = json['duration'].toString();
     sinopse = json['sinopse'].toString();
     genre = json['genre'].toString();

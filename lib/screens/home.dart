@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:panucci_movies/components/movie_card.dart';
 import 'package:panucci_movies/components/search_input.dart';
-import 'package:panucci_movies/screens/home/cubit/home_cubit.dart';
+
+import '../logic/cubit/home_cubit.dart';
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
