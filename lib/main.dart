@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:panucci_movies/logic/cubit/theme_cubit.dart';
 import 'package:panucci_movies/screens/home.dart';
-import 'package:panucci_movies/themes/my_theme.dart';
 
 void main() {
   runApp(const PanucciMovies());
@@ -12,10 +13,17 @@ class PanucciMovies extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Flutter Demo',
-      theme: myTheme,
-      home: const Home(),
+    return BlocProvider(
+      create: (context) => ThemeCubit(),
+      child: BlocBuilder<ThemeCubit, ThemeData>(
+        builder: (context, state) { 
+          return MaterialApp(
+            title: 'Flutter Demo',
+            theme: state,
+            home: const Home(),
+          );
+        }
+      ),
     );
   }
 }

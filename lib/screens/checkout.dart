@@ -44,7 +44,7 @@ class Checkout extends StatelessWidget {
                   style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
                 ),
               ),
-              const PaymentTotal(total: 100),
+              const PaymentTotal(total: 32),
               Expanded(
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.end,
