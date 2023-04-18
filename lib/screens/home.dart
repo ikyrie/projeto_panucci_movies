@@ -80,7 +80,7 @@ class _HomeState extends State<Home> {
                   ],
                 ),
               ),
-              BlocBuilder(
+              BlocBuilder<HomeCubit, HomeState>(
                 bloc: homeCubit,
                 builder: (context, state) {
                   if (state is HomeSuccess) {
