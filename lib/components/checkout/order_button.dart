@@ -12,17 +12,17 @@ class OrderButton extends StatelessWidget {
       style: ElevatedButton.styleFrom(
         elevation: 0,
         foregroundColor: Colors.white,
-        backgroundColor: Theme.of(context).colorScheme.surfaceTint),
+        backgroundColor: Theme.of(context).colorScheme.primary),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        children: const <Widget>[
+        children: <Widget>[
           Padding(
-            padding: EdgeInsets.only(right: 8.0),
-            child: Icon(Icons.account_balance_wallet),
+            padding: const EdgeInsets.only(right: 8.0),
+            child: Icon(Icons.account_balance_wallet, color: Theme.of(context).colorScheme.onPrimary,),
           ),
           Text(
             "Pedir",
-            style: TextStyle(fontWeight: FontWeight.w500),
+            style: TextStyle(fontWeight: FontWeight.w500, color: Theme.of(context).colorScheme.onPrimary),
           )
         ]),
     );
