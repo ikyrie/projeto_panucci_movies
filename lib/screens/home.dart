@@ -25,8 +25,6 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   final homeCubit = HomeCubit();
-  final TextEditingController inputController = TextEditingController();
-
   String dropdownValue = listGenres.first;
 
   @override
