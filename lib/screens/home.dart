@@ -1,20 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:panucci_movies/components/home/genre_filter.dart';
 import 'package:panucci_movies/components/movie_card.dart';
 
 import '../logic/cubit/home_cubit.dart';
-
-final listGenres = [
-  'Todos',
-  'Ação',
-  'Comédia',
-  'Drama',
-  'Romance',
-  'Documentário',
-  'Suspense',
-  'Terror',
-  'Ficção Científica'
-];
 
 class Home extends StatefulWidget {
   const Home({Key? key}) : super(key: key);
@@ -25,7 +14,6 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
   final homeCubit = HomeCubit();
-  String dropdownValue = listGenres.first;
 
   @override
   void initState() {
@@ -47,37 +35,7 @@ class _HomeState extends State<Home> {
                   style: Theme.of(context).textTheme.displayLarge,
                 ),
               ),
-              SliverToBoxAdapter(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                  children: [
-                    Text('Gênero: ',
-                        style: Theme.of(context).textTheme.displaySmall),
-                    DropdownButton<String>(
-                      value: dropdownValue,
-                      items: listGenres
-                          .map<DropdownMenuItem<String>>((String value) {
-                        return DropdownMenuItem<String>(
-                          value: value,
-                          child: Text(value),
-                        );
-                      }).toList(),
-                      onChanged: (String? value) {
-                        if (value != null) {
-                          if (value == 'Todos') {
-                            homeCubit.getMovies();
-                          } else {
-                            homeCubit.getMoviesByGenre(value);
-                          }
-                        }
-                        setState(() {
-                          dropdownValue = value!;
-                        });
-                      },
-                    ),
-                  ],
-                ),
-              ),
+              GenreFilter(homeCubit: homeCubit),
               BlocBuilder<HomeCubit, HomeState>(
                 bloc: homeCubit,
                 builder: (context, state) {
