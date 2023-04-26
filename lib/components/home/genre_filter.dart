@@ -26,7 +26,6 @@ class _GenreFilterState extends State<GenreFilter> {
 
   @override
   Widget build(BuildContext context) {
-
     return SliverToBoxAdapter(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -42,15 +41,13 @@ class _GenreFilterState extends State<GenreFilter> {
             }).toList(),
             onChanged: (String? value) {
               if (value != null) {
-                if (value == 'Todos') {
-                  widget.homeCubit.getMovies();
-                } else {
-                  widget.homeCubit.getMoviesByGenre(value);
-                }
+                value == 'Todos'
+                    ? widget.homeCubit.getMovies()
+                    : widget.homeCubit.getMoviesByGenre(value);
+                setState(() {
+                  dropdownValue = value;
+                });
               }
-              setState(() {
-                dropdownValue = value!;
-              });
             },
           ),
         ],

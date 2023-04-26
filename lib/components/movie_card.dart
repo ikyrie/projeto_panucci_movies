@@ -40,7 +40,7 @@ class MovieCard extends StatelessWidget {
                         )),
             )),
         Text(
-          movie.name ?? 'Indisponível',
+          movie.name,
           style: Theme.of(context).textTheme.displaySmall,
         )
       ],

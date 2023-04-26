@@ -40,8 +40,7 @@ class OrderDetails extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
-                Text(movie.name ?? "Nome Indisponível",
-                    style: Theme.of(context).textTheme.bodyLarge),
+                Text(movie.name, style: Theme.of(context).textTheme.bodyLarge),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 8.0),
                   child: Row(
@@ -49,7 +48,7 @@ class OrderDetails extends StatelessWidget {
                       ParentalRating(
                         classification: movie.classification,
                       ),
-                      Text(movie.duration ?? 'Duração Indisponível',
+                      Text(movie.duration,
                           style: Theme.of(context).textTheme.displaySmall),
                     ],
                   ),
